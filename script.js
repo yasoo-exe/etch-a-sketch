@@ -42,3 +42,14 @@ button.addEventListener("click", makeGrid);
 document.querySelector("button[type='reset']").addEventListener("click", () => {
   location.reload();
 });
+
+//adds an enter keyboard button option to the input box for value and to the reset button for reset
+document
+  .querySelector(".controls input[type='number']")
+  .addEventListener("keypress", (e) => {
+    e.code === "Enter" ? makeGrid() : e;
+  });
+
+window.addEventListener("keypress", (e) => {
+  e.code === "KeyR" ? location.reload() : e;
+});
