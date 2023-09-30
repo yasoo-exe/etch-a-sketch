@@ -26,7 +26,7 @@ function innerDivs(arg) {
   Array.from(divs).map((x) => {
     x.style.height = `${500 / arg}px`;
     x.style.width = `${500 / arg}px`;
-    x.addEventListener("mouseover", randomizeColor, { once: true });
+    x.addEventListener("mouseover", randomizeColor, { once: false });
   });
 }
 
@@ -39,3 +39,6 @@ function randomizeColor() {
 
 document.addEventListener("DOMContentLoaded", defaultGrid);
 button.addEventListener("click", makeGrid);
+document.querySelector("button[type='reset']").addEventListener("click", () => {
+  location.reload();
+});
