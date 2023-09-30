@@ -22,19 +22,32 @@ body {
 .controls {
     display: flex;
     flex-wrap: wrap;
-    gap: 10px;
+    gap: 005px;
+    justify-content: center;
     
 }
 
-.controls button {
+ button {
     background-color: yellow;
-    flex: 1;
+}
+
+button[type="reset"]{
+    padding: 8px 20px;
+    border-radius: 20px;
+    font-size: large;
+    background-color: lightblue;
+    box-shadow: 1px 1px 1px yellow;
 }
 
 .controls input {
   text-align: center;
   font-size: large;
   font-weight: bold;
-  flex: 1;
+}
+
+/* breaks the third item to a new row in flexbox */
+.break {
+    flex-basis: 100%;
+    height: 0;
 }
 
