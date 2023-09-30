@@ -1,17 +1,40 @@
 .container {
     width: 500px;
     height: 500px;
+    min-width: 500px;
     display: flex;
     flex-wrap: wrap;
     border: 5px solid red;
+    box-shadow: 0px 0px 4px 4px white; 
 }
 
 body {
     height: 100vh;
     display: flex;
-    flex-direction: column;
-    justify-content: center;
+    flex-direction: row-reverse;
+    justify-content: space-evenly;
     align-items: center;
     gap: 20px;
+    background-color: black;
+    flex-wrap: wrap;
+}
+
+.controls {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 10px;
+    
+}
+
+.controls button {
+    background-color: yellow;
+    flex: 1;
+}
+
+.controls input {
+  text-align: center;
+  font-size: large;
+  font-weight: bold;
+  flex: 1;
 }
 
